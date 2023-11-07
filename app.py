@@ -27,12 +27,9 @@ def process_datas(container_path: Path, datas: List[Dict[str, Union[int, str]]])
 def evaluate():
     try:
         data = request.get_json()
-        school = data.get('school')
         container_url = data.get('container_url')
         datas = data.get('datas', [])
 
-        if not school:
-            return jsonify({'error': 'School not provided'}), 400
         if not container_url:
             return jsonify({'error': 'URL for images container not provided'}), 400
         if not datas:
