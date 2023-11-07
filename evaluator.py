@@ -19,14 +19,6 @@ LABELS = {
     '집': ['집전체', '지붕', '집벽', '문', '창문', '굴뚝', '연기', '울타리', '길', '연못', '산', '나무', '꽃', '잔디', '태양']
 }
 
-agreeableness = '우호성'
-conscientiousness = '성실성'
-extraversion = '외향성'
-neuroticism = '신경성'
-openness_to_experience = '경험에 대한 개방성'
-
-STAT_TYPE = (agreeableness, conscientiousness, extraversion, neuroticism, openness_to_experience)
-
 
 class BoxData:
     def __init__(self, boxes: List[BoundingBoxType], labels: List[str], target: str):

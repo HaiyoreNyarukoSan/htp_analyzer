@@ -5,21 +5,21 @@ import ultralytics.engine.results
 from ultralytics import YOLO
 
 from evaluator import ModelEvaluator
-from utils import find_static_file, fetch_pickle
+from utils import find_static_file
 
 BoundingBoxType = ultralytics.engine.results.Boxes
 YOLOResultType = ultralytics.engine.results.Results
-MAX_SCORE = 10
 
 DATA_CATEGORY = ['나무', '남자사람', '여자사람', '집']
 
-agreeableness = '우호성'
-conscientiousness = '성실성'
-extraversion = '외향성'
-neuroticism = '신경성'
-openness_to_experience = '경험에 대한 개방성'
+# agreeableness = '우호성'
+# conscientiousness = '성실성'
+# extraversion = '외향성'
+# neuroticism = '신경성'
+# openness_to_experience = '경험에 대한 개방성'
 
-STAT_TYPE = (agreeableness, conscientiousness, extraversion, neuroticism, openness_to_experience)
+# STAT_TYPE = (agreeableness, conscientiousness, extraversion, neuroticism, openness_to_experience)
+STAT_TYPE = ('agreeableness', 'conscientiousness', 'extraversion', 'neuroticism', 'openness')
 stat_deserializer = lambda scores: dict((t, s) for t, s in zip(STAT_TYPE, scores))
 
 
